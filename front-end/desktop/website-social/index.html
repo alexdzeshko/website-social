@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="websiteSocial">
+	<head>
+		<meta charset="utf-8">
+
+		<title>website social</title>
+
+		<script>
+			document.write('\x3Cscript src="production.js?t=' + (+new Date) + '">\x3C/script>');
+			document.write('\x3Cscript src="version.js?t=' + (+new Date) + '">\x3C/script>');
+		</script>
+	</head>
+	<body>
+		<div ng-view></div>
+
+		<!-- vendor javascript library -->
+		<script>
+			document.write('\x3Cscript src="vendor/angular/angular' + (PRODUCTION ? '.min' : '') + '.js?v=' + VERSION + '">\x3C/script>');
+			document.write('\x3Cscript src="vendor/angular/angular-route' + (PRODUCTION ? '.min' : '') + '.js?v=' + VERSION + '">\x3C/script>');
+			document.write('\x3Cscript src="vendor/angular/angular-animate' + (PRODUCTION ? '.min' : '') + '.js?v=' + VERSION + '">\x3C/script>');
+		</script>
+		<!-- /vendor javascript library -->
+
+		<!-- application javascript -->
+		<script>
+			document.write('\x3Cscript src="app/app.js?v=' + VERSION + (PRODUCTION ? '' : '&t=' + (+new Date)) + '">\x3C/script>');
+			document.write('\x3Cscript src="app/route.js?v=' + VERSION + (PRODUCTION ? '' : '&t=' + (+new Date)) + '">\x3C/script>');
+			//document.write('\x3Cscript src="scripts/services/linkedinService.js?v=' + VERSION + (PRODUCTION ? '' : '&t=' + (+new Date)) + '">\x3C/script>');
+			//document.write('\x3Cscript src="scripts/services/twitterService.js?v=' + VERSION + (PRODUCTION ? '' : '&t=' + (+new Date)) + '">\x3C/script>');
+			document.write('\x3Cscript src="app/home/homeCtrl.js?v=' + VERSION + (PRODUCTION ? '' : '&t=' + (+new Date)) + '">\x3C/script>');
+			//document.write('\x3Cscript src="scripts/directives/googleMapDirective.js?v=' + VERSION + (PRODUCTION ? '' : '&t=' + (+new Date)) + '">\x3C/script>');
+
+			//document.write('\x3Cscript src="scripts/places.js?v=' + VERSION + (PRODUCTION ? '' : '&t=' + (+new Date)) + '">\x3C/script>');
+			//document.write('\x3Cscript src="scripts/geo.js?v=' + VERSION + (PRODUCTION ? '' : '&t=' + (+new Date)) + '">\x3C/script>');
+		</script>
+		<!-- /application javascript -->
+	</body>
+</html>
